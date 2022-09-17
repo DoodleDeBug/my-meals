@@ -31,7 +31,7 @@ const Navbar = ({ session }) => {
             <li className={styles.buttons}>Login</li>
           </Link>
           <Link href="/signup">
-            <li className={styles.buttons}>Signup</li>
+            <li className={styles.buttons}>Sign up</li>
           </Link>
         </ul>
       )}
