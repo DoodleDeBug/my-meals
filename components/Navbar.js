@@ -1,41 +1,23 @@
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
-import { supabase } from "../utils/supabase";
 
-const Navbar = ({ session }) => {
+const Navbar = () => {
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       <div>
         <p className={styles.title}>My Meals</p>
       </div>
-      {/* if user is logged in, buttons are create and logout, if not, buttons are login and signup */}
-      {session?.user ? (
-        <ul className={styles.navContent}>
-          <Link href="/">
-            <li className={styles.name}>Home</li>
-          </Link>
 
-          <button
-            className={styles.buttons}
-            onClick={() => supabase.auth.signOut()}
-          >
-            Logout
-          </button>
-          <Link href="/create">
-            <button className={styles.buttons}>Create New Workout</button>
-          </Link>
-        </ul>
-      ) : (
-        <ul className={styles.navContent}>
-          <Link href="/login">
-            <li className={styles.buttons}>Login</li>
-          </Link>
-          <Link href="/signup">
-            <li className={styles.buttons}>Sign up</li>
-          </Link>
-        </ul>
-      )}
-    </div>
+      <ul className={styles.navContent}>
+        <Link href="/">
+          <li className={(styles.name, styles.buttons)}>Home</li>
+        </Link>
+
+        <Link href="/about">
+          <li className={(styles.name, styles.buttons)}>About</li>
+        </Link>
+      </ul>
+    </nav>
   );
 };
 
