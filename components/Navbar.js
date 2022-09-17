@@ -3,20 +3,16 @@ import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className={styles.container}>
-      <div>
-        <p className={styles.title}>My Meals</p>
+    <nav>
+      <div className="logo">
+        <h1>My Meals</h1>
       </div>
-
-      <ul className={styles.navContent}>
-        <Link href="/">
-          <li className={(styles.name, styles.buttons)}>Home</li>
-        </Link>
-
-        <Link href="/about">
-          <li className={(styles.name, styles.buttons)}>About</li>
-        </Link>
-      </ul>
+      <Link href="/">
+        <a>Home</a>
+      </Link>
+      <Link href="/about">
+        <a>About</a>
+      </Link>
     </nav>
   );
 };
