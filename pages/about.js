@@ -3,16 +3,21 @@ import styles from "../styles/Home.module.css";
 const About = () => {
   return (
     <div>
-      <h1 className={styles.title}>About page</h1>
+      <h1 className={styles.title}>About</h1>
       <p className={styles.text}>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quo,
-        vero eius non at tempore officiis odio asperiores exercitationem nostrum
-        quis a omnis voluptates enim quam, veniam amet quasi. Maxime.
+        My Meals helps people answer the age old question "What's for dinner?"
       </p>
       <p className={styles.text}>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quo,
-        vero eius non at tempore officiis odio asperiores exercitationem nostrum
-        quis a omnis voluptates enim quam, veniam amet quasi. Maxime.
+        Quickly and easily get tasty suggestions for your next meal by simply
+        selecting some filters and pressing "Suggest Meal". With new, exciting
+        features coming out soon such as:
+        <ul>
+          <li>Personal Meal DataBase</li>
+          <li>Sign up and login</li>
+          <li>MORE filters</li>
+          <li>Weekly meal planner</li>
+        </ul>
+        There is something for everyone!
       </p>
     </div>
   );
